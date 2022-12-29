@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>page 30</title>
+
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navigation {
+        position: fixed;
+        top: 95px;
+        left: 20px;
+        bottom: 20px;
+        width: 70px;
+        border-radius: 10px;
+        box-sizing: initial;
+        border-left: 5px solid #BCCC9A;
+        background: #BCCC9A;
+        transition: widht 0, 5s;
+        overflow: hidden;
+      }
+
+      .navigation ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-left: 5px;
+        padding-top: 40px;
+      }
+
+      .navigation ul li {
+        position: relative;
+        list-style: none;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+
+      .navigation ul li.active {
+        background: #fff;
+      }
+
+      .navigation ul li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        display: flex;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .navigation ul li.active a {
+        color: #333;
+      }
+
+      .navigation ul li a .icon {
+        position: relative;
+        display: block;
+        min-width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+      }
+
+      .navigation .sidebar1 ul li a:hover {
+        color: #6C4A4A;
+      }
+
+      .navigation .sidebar a:hover {
+        color: #7FC8A9;
+        
+      }
+
+      .navigation ul li a .icon ion-icon {
+        font-size: 1, 9em;
+        font-weight: bold;
+      }
+
+      .navigation ul li a .title {
+        position: relative;
+        display: block;
+        padding-left: 10px;
+        height: 60px;
+        line-height: 60px;
+        white-space: normal;
+      }
+
+      .toggle {
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background: #BCCC9A;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .toggle .active {
+        background: #ff4d89;
+      }
+
+      .toggle ion-icon {
+        position: absolute;
+        color: #fff;
+        font-size: 34px;
+        display: none;
+      }
+
+      .toggle ion-icon.open,
+      .toggle.active ion-icon.close {
+        display: block;
+      }
+
+      .toggle ion-icon.close,
+      .toggle.active ion-icon.open {
+        display: none;
+      }
+      
+    
+    .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'comic sans ms';
+    color: #6C4A4A;
+    }
+    
+    body {
+        width: 100%;
+        margin: auto;
+    }
+
+    nav {
+      display: inline;
+      background-color: #fff;
+      position: fixed;
+    }
+
+    .deskripsi h1 {
+        font-family: 'comic sans ms';
+        text-align: center;
+        padding-top: 70px;
+        margin-bottom: 50px;
+    }
+
+    .pengertian h3 {
+        margin-left: 383px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'comic sans ms';
+        color: #7FC8A9;  
+    }
+
+    .pengertian img {
+        width: 240px;
+        height: 280px;
+        float: left;
+        margin-right: 10px;
+        margin-left: 130px;
+        border-radius: 0.5cm;
+        
+    }
+
+    .isi1 {
+      margin-right: 100px;
+      margin-bottom: 100px;
+      font-family: 'comic sans ms';
+    }
+
+    .penyebab h3 {
+        padding-top: 20px;
+        padding-bottom: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'comic sans ms';
+        color: #7FC8A9;
+        text-align: start;
+        margin-left: 130px;
+    }
+
+    .penyebab img {
+        width: 350px;
+        height: 250px;
+        float: right;
+        margin-right: 100px; 
+        margin-left: 10px;
+        border-radius: 0.5cm;
+    }
+
+    .isi2 {
+      margin-left: 130px;
+      margin-right: 100px;
+      font-family: 'comic sans ms';
+      margin-bottom: 90px;
+    }
+
+    
+
+    .gejala h3 {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'comic sans ms';
+        color: #7FC8A9;
+        margin-left: 435px;
+    }
+
+    .gejala .isi {
+      margin-right: 100px;
+      font-family: 'comic sans ms';
+      margin-bottom: 15px;
+    }
+
+    .gejala ol {
+      font-family: 'comic sans ms';
+    }
+
+    .gejala .isi3 {
+       margin-top: 20px;
+       margin-bottom: 100px;
+       font-family: 'comic sans ms';
+       margin-right: 100px;  
+    }
+
+    .isi3 ol {
+      font-family: 'comic sans ms';
+    }
+
+    .gejala img {
+        width: 300px;
+        height: 320px;
+        float: left;
+        margin-right: 10px;
+        margin-left: 130px;
+    }
+
+    .diagnosis h3 {
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'comic sans ms';
+        color: #7FC8A9;
+        margin-left: 130px;
+    }
+
+    .isi4 {
+      margin-left: 130px;
+      font-family: 'comic sans ms';
+      margin-bottom: 90px;
+    }
+
+    .komplikasi h3 {
+        text-align: left;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'comic sans ms';
+        color: #7FC8A9;
+        margin-left: 130px;
+    }
+
+    .isi5 {
+      margin-right: 100px;
+      margin-left: 130px;
+      font-family: 'comic sans ms';
+      margin-bottom: 100px;
+    }
+
+    .pengobatan h3 {
+      text-align: left;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: 'comic sans ms';
+      color: #7FC8A9;
+      margin-left: 130px;
+    }
+
+    .isi6 {
+      margin-left: 130px;
+      margin-right: 100px;
+      font-family: 'comic sans ms';
+      margin-bottom: 50px;
+    }
+
+    .pencegahan h3 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'comic sans ms';
+        color: #7FC8A9;
+        margin: auto;
+    }
+
+    .pencegahan img {
+       width: 430px;
+       height: 340px;
+       margin-left: 450px;
+    }
+
+    .pencegahan .isi7 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 130px;
+        margin-right: 100px;
+        font-family: 'comic sans ms';
+    }
+
+    .pencegahan ol {
+      margin-left: 40px;
+      font-family: 'comic sans ms';
+    }
+
+    header {
+        width: 900px;
+        height: 250px;
+    }
+
+    header img {
+     width: 880px;
+     height: 250px;
+    }
+
+    .navigasi {
+     position: sticky;
+     width: 100%;
+    }
+
+    menu {
+      width: 100%;
+      height: 48px;
+      background-color: #BCCC9A;
+      position: fixed;
+    }
+
+    
+
+    menu li {
+     list-style: none;
+     float: left;
+     margin-right: 50px;
+     color: #fff;
+     padding-top: 10px;
+     margin-left: 20px;
+    }
+
+    menu li a {
+     text-decoration: none;
+     color: #fff;
+     font-family: 'comic sans ms';
+     transition: margin bottom 1s;
+    }
+
+    menu li a:hover {
+     color: rgb(250, 238, 243);
+     transform: rotate(200deg);
+     margin-bottom: 800px;
+    }
+
+
+
+    #copyright {
+     text-align: center;
+     width: 100%;
+     padding: 50px 0px 50px 0px;
+     margin-top: 50px;
+     font-family: 'comic sans ms';
+     background-color: #fff;
+    }
+
+    .variancovid h2 {
+     text-align: center;
+     font-family: 'comic sans ms';
+     color: #7FC8A9;
+     font-size: 20px;
+    }
+
+    .variancovid img {
+     width: 280px;
+     height: 165px;
+     border-radius: 0.5cm;
+
+    }
+
+    .varian {
+     text-align: center;
+     font-family: 'comic sans ms';
+     margin-right: 8px;
+     margin-left: 8px;
+    }
+
+    .variancovid table td, table td * {
+     vertical-align: top;
+     border-radius: 0.5cm;
+    }
+    
+    section.variancovid {
+     border: 1px solid #ccc;
+     border-radius: 0.5cm;
+     width: 280px;
+     height: 800px;
+     float: right;
+     margin-right: 100px;
+     margin-left: 10px;
+    }
+ </style>
+</head>
+
+<body>
+
+<div class="navigation">
+  <ul>
+    <div class="sidebar">
+      <li class="list active">
+        <a href="page30.html">
+                <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                <span class="title">Home</span>
+        </a>
+      </li>
+
+          <li class="list">
+            <a href="aulia2424.github.io/index.html" target="_blank">
+              <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+              <span class="title">Profile</span>
+            </a>
+          </li>
+
+          <li class="list">
+            <a href="https://www.instagram.com/auliarthaaa/" target="_blank">
+              <span class="icon"><ion-icon name="logo-instagram"></ion-icon></span>
+              <span class="title">Instagram</span>
+            </a>
+          </li>
+
+          <li class="list">
+            <a href="https://www.facebook.com/auliarthaaaa" target="_blank">
+              <span class="icon"><ion-icon name="logo-facebook"></ion-icon></span>
+              <span class="title">Facebook</span>
+            </a>
+          </li>
+
+          <li class="list">
+            <a href="https://github.com/aulia2424/aulia2424" target="_blank">
+              <span class="icon"><ion-icon name="logo-github"></ion-icon></span>
+              <span class="title">Github</span>
+            </a>
+          </li>
+
+          <li class="list">
+            <a href="#">
+              <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+              <span class="title">Setting</span>
+            </a>
+          </li>
+
+          <li class="list">
+            <a href="#">
+              <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></span>
+              <span class="title">Help</span>
+            </a>
+          </li>
+
+          <li class="list">
+            <a href="#">
+              <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+              <span class="title">Sign Out</span>
+            </a>
+          </li>
+    </ul>
+  </div>
+</div>
+
+  <div class="toggle">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="menu-outline" class="close"></ion-icon>
+  </div>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script>
+        //add active class in selected list item
+        let list = document.querySelectorAll(".list");
+        for (let i = 0; i < list.length; i++) {
+          list[i].onclick = function () {
+            let j = 0;
+            while (j < list.length) {
+              list[j++].className = "list";
+            }
+            list[i].className = "list active";
+          };
+        }
+      </script>
+     
+     
+
+<!--menu-->
+<div class="navigasi">
+     <menu>
+         <li><a href="#"><h2>auliarthaaa</h2></a></li>
+         <li><a href="#pengertian">Pengertian</a></li>
+         <li><a href="#penyebab">Penyebab</a></li>
+         <li><a href="#gejala">Gejala</a></li>
+         <li><a href="#diagnosis">Diagnosis</a></li>
+         <li><a href="#komplikasi">Komplikasi</a></li>
+         <li><a href="#pengobatan">Pengobatan</a></li>
+         <li><a href="#pencegahan">Pencegahan</a></li>
+     </menu>
+</div>
+ <!--akhir menu-->
+
+
+    <div class="deskripsi">
+    <p><h1>Covid 19</h1></p></div>
+
+<!--untuk pengertian-->
+<section id="pengertian">
+  <div class="pengertian">
+    <div class="kolom">
+        <h3><b>Pengertian Virus Corona (COVID-19)</b></h3>
+            <p>
+                <img src="img/img2.jpg">
+            </p>
+      <div class="isi1">
+          <p>Infeksi coronavirus merupakan penyakit yang disebabkan oleh virus corona dan menimbulkan gejala utama berupa gangguan pernapasan.</p>
+        <br />
+          <p>Penyakit ini menjadi sorotan karena kemunculannya di akhir tahun 2019 pertama kali di Wuhan, China.</p>
+        <br />
+          <p>Lokasi kemunculannya pertama kali ini, membuat coronavirus juga dikenal dengan sebutan Wuhan virus.</p>
+        <br />
+          <p>Selain China, coronavirus juga menyebar secara cepat ke berbagai negara lain, termasuk Jepang, Thailand, Jepang, Korea Selatan, bahkan hingga ke Amerika Serikat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Akhir Pengertian-->
+
+<!--untuk penyebab-->
+<section id="penyebab"></section>
+  <div class="penyebab">
+    <div class="kolom">
+            <h3><b>Penyebab Virus Corona (COVID-19)</b></h3>
+            <p>
+                <img src="img/img6.jpg">
+            </p>
+      <div class="isi2">
+        <p>Penyebab Corona virus merupakan virus single stranded RNA yang berasal dari kelompok Coronaviridae.</p>
+        <p>Dinamakan coronavirus karena permukaannya yang berbentuk seperti mahkota (crown/corona).</p>
+        <br />
+        <p>Virus lain yang termasuk dalam kelompok yang serupa adalah virus yang menyebabkan Middle East Respiratory Syndrome (MERS-CoV) dan Severe Acute Respiratory Syndrome (SARS-CoV) beberapa tahun silam.</p><br />
+        <p>Namun, virus corona dari Wuhan ini merupakan virus baru yang belum pernah teridentifikasi pada manusia sebelumnya.</p>
+        <p>Karena itu, virus ini juga disebut sebagai 2019 Novel Coronavirus atau 2019-nCoV.</p>
+        <br />
+        <p>Virus corona umumnya ditemukan pada hewan –seperti unta, ular, hewan ternak, kucing, dan kelelawar.</p>
+        <br />
+        <p>Manusia dapat tertular virus apabila terdapat riwayat kontak dengan hewan tersebut, misalnya pada peternak atau pedagang di pasar hewan.</p>
+        <p>Namun, adanya ledakan jumlah kasus di Wuhan, China menunjukkan bahwa corona virus dapat ditularkan dari manusia ke manusia.</p>
+        <br />
+        <p>Virus bisa ditularkan lewat droplet, yaitu partikel air yang berukuran sangat kecil dan biasanya keluar saat batuk atau bersin. Apabila droplet tersebut terhirup atau mengenai lapisan kornea mata, seseorang berisiko untuk tertular penyakit ini.</p><br />
+        <p>Meski semua orang dapat terinfeksi virus corona, mereka yang lanjut usia, memiliki penyakit kronis, dan memiliki daya tahan tubuh rendah lebih rentan mengalami infeksi ini serta komplikasinya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Akhir Penyabab-->
+
+    <!--untuk gejala-->
+    <section id="gejala">
+      <div class="gejala">
+          <div class="kolom">
+          <h3><b>Gejala Virus Corona (COVID-19)</b></h3>
+      <p>
+          <img src="img/img3.jpg">
+      </p>
+     
+    <div class="isi">
+      <p>Gejala Coronavirus bervariasi, mulai dari flu biasa hingga gangguan pernapasan berat menyerupai pneumonia. Gejala Corona yang umum dialami mereka yang mengalami infeksi coronavirus adalah:</p>
+    </div>
+        <ol type="1">
+          <li><p>Demam tinggi disertai menggigil</p></li>
+          <li><p>Batuk kering</p></li>
+          <li><p>Pilek</p></li>
+          <li><p>Hidung berair dan bersin-bersin</p></li>
+          <li><p>Nyeri tenggorokan</p></li>
+          <li><p>Sesak napas</p></li>
+        </ol>
+    <div class="isi3">
+      <p>Gejala virus corona tersebut dapat bertambah parah secara cepat dan menyebabkan gagal napas hingga kematian. Centers for Disease Control and Prevention (CDC) gejala infeksi virus 2019-nCoV dapat muncul mulai dua hari hingga 14 hari setelah terpapar virus tersebut.</p>
+    </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+    <!-- end gejala -->
+
+    
+   <!-- varian covid -->
+   <section class="variancovid">
+          <img src="img/img4.jpg" alt="" />
+          <h2>Varian Covid</h2>
+          <div class="varian">
+            <ol type="a">
+              <p>
+                Varian virus corona Inggris <b>B.1.1.7</b> disebut <a href="page30v1.html" style="text-decoration: none;" ><div class="hoover"><b>Alpha...</b></div></a>
+              </p>
+              <p>
+                Varian virus corona Afrika Selatan <b>B.1.351</b> disebut <div class="hoover"><a href="page30v2.html" style="text-decoration: none;"><b>Beta...</b></a></div>
+              </p>
+              <p>
+                Varian virus corona Brasil <b>P.1</b> disebut <div class="hover"><a href="page30v3.html" style="text-decoration: none;"><b>Gamma...</b></a></div>
+              </p>
+              <p>
+                Varian India <b>B.1.617.2</b> disebut <div class="hoover"><a href="page30v4.html" style="text-decoration: none; "><b>Delta...</b></a></div>
+              </p>
+              <p>
+                Varian Amerika Serikat <b>B.1.427/B.1.429</b> disebut <div class="hoover"><a href="page30v5.html" style="text-decoration: none;"><b>Epsilon...</b></a></div>
+              </p>
+              <p>
+                Varian virus corona Brasil <b>P.2</b> disebut <div class="hoover"><a href="page30v6.html" style="text-decoration: none;"><b>Zeta...</b></a></div>
+              </p>
+              <p>
+                Varian <b>B.1.525</b> disebut <div class="hoover"><a href="page30v7.html" style="text-decoration: none;"><b>Eta...</b></a></div>
+              </p>
+              <p>
+                Varian Filipina <b>P.3</b> disebut <div class="hoover"><a href="page30v8.html" style="text-decoration: none;"><b>Theta...</b></a></div>
+              </p>
+              <p>
+                Varian Amerika Serikat <b>B.1.526</b> disebut <div class="hoover"><a href="page30v9.html" style="text-decoration: none;"><b>Iota...</b></a></div>
+              </p>
+              <p>
+                Varian India <b>B.1.617.1</b> disebut <div class="hoover"><a href="page30v10.html" style="text-decoration: none;"><b>Kappa...</b></a></div>
+              </p>
+            </ol>
+          </div>
+  </section>
+  <!-- end varian covid -->
+
+    
+
+     <!--untuk diagnosis-->  
+      <section id="diagnosis">
+        <div class="diagnosis">
+          <div class="kolom">
+            <h3><b>Diagnosis Virus Corona (COVID-19)</b></h3>
+          
+            <div class="isi4">
+            <p>Infeksi coronavirus umumnya diketahui melalui gejala dan pemeriksaan fisik yang dikeluhkan pasien</p>
+            <p>Setelah itu, dokter akan melakukan sejumlah pemeriksaan penunjang untuk membantu menegakkan diagnosis.</p>
+          <br />
+            <p>Pemeriksaan penunjang tersebut antara lain adalah pemeriksaan darah lengkap, pemeriksaan pembekuan darah, fungsi ginjal dan hati serta pemeriksaan virologi.</p>
+          <br />
+            <p>Selain itu, spesimen dari hidung dan faring (tenggorokan) pasien pun akan diambil dengan teknik swab.</p>
+          <br />
+            <p>Demikian pula, sediaan dahak dan, bila diperlukan, cairan bronkus (saluran pernapasan yang lebih kecil).</p>
+            <p>Melalui pemeriksaan tersebut dapat diketahui apakah penyakit pasien disebabkan oleh virus atau sebab yang lain.</p>
+          <br />
+            <p> Sementara itu, plasma darah pasien pun akan diperiksa untuk menemukan RNA virus corona.</p>
+          <br />
+            <p>Untuk pemeriksaan radiologi, dapat dilakukan pemeriksaan rontgen (x-ray) dada dan CT-scan dada.</p>
+            <p>Sebagian besar pasien akan menunjukkan gambaran kekeruhan di kedua paru.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+  <!--untuk komplikasi-->
+  <section id="komplikasi">
+    <div class="komplikasi">
+      <div class="kolom">
+          <h3><b>Komplikasi Virus Corona (COVID-19)</b></h3>
+        <div class="isi5">
+           <p>Pasien yang terinfeksi coronavirus dapat mengalami gejala gangguan pernapasan seperti pneumonia berat, seperti demam tinggi dan sesak napas.</p><br />
+           <p>Komplikasi seperti gagal napas, gagal jantung akut, dan infeksi sekunder akibat kuman lainnya dapat terjadi bila kondisi tersebut tidak segera diatasi atau bila penyakit mengalami perburukan dengan sangat cepat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--untuk pengobatan-->
+  <section id="pengobatan">
+    <div class="pengobatan">
+      <div class="kolom">
+          <h3><b>Pengobatan Virus Corona (COVID-19)</b></h3>
+        <div class="isi6">
+            <p>Hingga saat ini, belum ada terapi anti-virus yang terbukti efektif untuk mengatasi infeksi 2019-novel coronavirus.</p><br />
+            <p>Beberapa anti-virus yang telah berhasil menangani infeksi MERS-CoV dan SARS-CoV sebelumnya, belum menunjukkan hasil memuaskan untuk mengatasi infeksi coronavirus yang baru ini.</p><br />
+            <p>Penderita yang terinfeksi virus corona akan menerima terapi yang bersifat suportif untuk mengurangi gejala. Misalnya anti-piretik untuk menurunkan suhu tubuh dan cairan untuk mencegah dehidrasi, serta terapi oksigen pada pasien yang mengalami sesak napas.</p><br />
+            <p>Pada kondisi yang berat, bantuan napas melalui mesin ventilator dapat diberikan pada pasien untuk menyokong fungsi organ vital lainnya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Akhir Pengobatan-->
+
+  <!--untuk pencegahan-->
+    <section id="pencegahan">
+      <div class="pencegahan">
+        <div class="kolom">
+                  <p>
+                    <img src="img/img5.jpg">
+                  </p>
+                    <h3>Pencegahan dari Virus Covid</h3>
+          <div class="isi7">
+                    <br />
+                  <p>Meski gejala penyakit coronavirus menyerupai penyakit pernapasan lain seperti pneumonia atau influenza, sejauh ini belum ada vaksin yang dapat mencegah penularan penyakit coronavirus. 
+                    <br />
+                    Pemberian vaksin pneumonia maupun vaksin influenza tidak dapat memberikan proteksi terhadap penyebaran infeksi virus corona.</p>
+                    <br />
+                  <p>Cara terbaik untuk menghindari penyakit infeksi coronavirus adalah melakukan tindakan pencegahan secara aktif. CDC menyarankan setiap orang melakukan tindakan seperti:</p><br />
+    <ol type="1">
+        <li><p>Rutin mencuci tangan menggunakan sabun dan air mengalir selama setidaknya 20 detik</p></li>
+        <li><p>Apabila tidak memungkinkan atau tidak tersedia air dan sabun, bersihkan tangan menggunakan pembersih tangan berbahan alkohol</p></li>
+        <li> <p>Hindari menyentuh hidung, mata, atau mulut terutama bila tangan masih kotor</p></li>
+        <li> <p>Hindari kontak dengan orang yang sedang sakit</p></li>
+        <li><p>Tetaplah di rumah bila sedang sakit</p></li>
+        <li><p>Tutup mulut dengan tisu atau dengan menekuk siku saat Anda batuk atau bersin</p></li>
+        <li> <p>Hindari kontak dengan hewan ternak secara langsung</p></li>
+        <li><p>Hindari bepergian, terutama ke daerah dengan kasus infeksi coronavirus</p></li>
+        <li> <p>Hindari mengonsumsi daging yang belum matang sempurna.</p></li>
+        <li><p>Menjaga nutrisi dengan mengonsumsi makanan yang bergizi seimbang, minum air putih dalam jumlah cukup, dan istirahat cukup juga dapat membantu menjaga kondisi tubuh agar tetap bugar dan terhindar dari infeksi virus corona.</p></li>
+    </ol>
+        <br />
+        <p>Setiap orang yang mengalami gejala menyerupai infeksi corona, jangan ragu untuk segera berkonsultasi dengan tenaga kesehatan untuk memastikan penyebabnya.</p></div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Akhir Pencegahan-->
+
+<!--Copyright-->
+  <footer>
+    <div id="copyright">
+        <div class="wrapper">
+            &copy; 2021. <b>dinkes.bulelengkab.go.id</b> All Right Reseved.
+        </div>
+    </div>
+  </footer>
+<!--Akhir Copyright-->
+    </body>
+</html>

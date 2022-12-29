@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page30 varian 3</title>
+    <style>
+      * {
+        margin: none;
+        padding: none;
+      }
+
+      .navigation {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        bottom: 20px;
+        width: 70px;
+        border-radius: 10px;
+        box-sizing: initial;
+        border-left: 5px solid #bccc9a;
+        background: #bccc9a;
+        transition: widht 0, 5s;
+        overflow: hidden;
+      }
+
+      .navigation ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-left: 5px;
+        padding-top: 40px;
+      }
+
+      .navigation ul li {
+        position: relative;
+        list-style: none;
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+
+      .navigation ul li.active {
+        background: #fff;
+      }
+
+      .navigation ul li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        display: flex;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .navigation ul li.active a {
+        color: #333;
+      }
+
+      .navigation ul li a .icon {
+        position: relative;
+        display: block;
+        min-width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+      }
+
+      .navigation .sidebar1 ul li a:hover {
+        color: #6c4a4a;
+      }
+
+      .navigation .sidebar a:hover {
+        color: #7fc8a9;
+      }
+
+      .navigation ul li a .icon ion-icon {
+        font-size: 1, 9em;
+        font-weight: bold;
+      }
+
+      .navigation ul li a .title {
+        position: relative;
+        display: block;
+        padding-left: 10px;
+        height: 60px;
+        line-height: 60px;
+        white-space: normal;
+      }
+
+      .toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background: #bccc9a;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .toggle .active {
+        background: #ff4d89;
+      }
+
+      .toggle ion-icon {
+        position: absolute;
+        color: #fff;
+        font-size: 34px;
+        display: none;
+      }
+
+      .toggle ion-icon.open,
+      .toggle.active ion-icon.close {
+        display: block;
+      }
+
+      .toggle ion-icon.close,
+      .toggle.active ion-icon.open {
+        display: none;
+      }
+
+      .header {
+        margin-left: 20px;
+      }
+
+      .header h1 {
+        margin-left: 150px;
+        font-family: "comic sans ms";
+        margin-top: 10px;
+        color: #7fc8a9;
+      }
+
+      .header p {
+        font-family: "comic sans ms";
+        text-align: left;
+        font-size: 16px;
+        margin: 5px;
+      }
+
+      .isi4 {
+        margin-left: 150px;
+      }
+
+      #copyright {
+        text-align: center;
+        width: 100%;
+        padding: 50px 0px 50px 0px;
+        margin-top: 200px;
+        font-family: "comic sans ms";
+      }
+
+      .variancovid h2 {
+        text-align: center;
+        font-family: "comic sans ms";
+        color: #7fc8a9;
+        font-size: 20px;
+      }
+
+      .variancovid img {
+        margin-left: 0%;
+        width: 280px;
+        height: 165px;
+        border-radius: 0.5cm;
+      }
+
+      .varian p {
+        text-align: center;
+        margin-right: 25px;
+        margin-left: 0px;
+      }
+
+      .variancovid table td,
+      table td * {
+        vertical-align: top;
+        text-align: justify;
+        border-radius: 0.5cm;
+      }
+
+      section.variancovid {
+     border: 1px solid #ccc;
+     border-radius: 0.5cm;
+     width: 280px;
+     height: 785px;
+     float: right;
+     margin-right: 100px;
+     margin-left: 10px;
+
+    }
+
+      
+    </style>
+  </head>
+
+<body>
+  <!--Side bar-->
+  <div class="navigation">
+    <ul>
+      <div class="sidebar">
+        <li class="list active">
+          <a href="page30.html">
+                  <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                  <span class="title">Home</span>
+          </a>
+        </li>
+  
+            <li class="list">
+              <a href="aulia2424.github.io/index.html">
+                <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                <span class="title">Profile</span>
+              </a>
+            </li>
+  
+            <li class="list">
+              <a href="https://www.instagram.com/auliarthaaa/" target="_blank">
+                <span class="icon"><ion-icon name="logo-instagram"></ion-icon></span>
+                <span class="title">Instagram</span>
+              </a>
+            </li>
+
+            <li class="list">
+              <a href="https://www.facebook.com/auliarthaaaa" target="_blank">
+                <span class="icon"><ion-icon name="logo-facebook"></ion-icon></span>
+                <span class="title">Facebook</span>
+              </a>
+            </li>
+
+            <li class="list">
+              <a href="https://github.com/aulia2424/aulia2424" target="_blank">
+                <span class="icon"><ion-icon name="logo-github"></ion-icon></span>
+                <span class="title">Github</span>
+              </a>
+            </li>
+  
+            <li class="list">
+              <a href="#">
+                <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                <span class="title">Setting</span>
+              </a>
+            </li>
+  
+            <li class="list">
+              <a href="#">
+                <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></span>
+                <span class="title">Help</span>
+              </a>
+            </li>
+  
+            <li class="list">
+              <a href="#">
+                <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                <span class="title">Sign Out</span>
+              </a>
+            </li>
+      </ul>
+    </div>
+  </div>
+  
+    <div class="toggle">
+          <ion-icon name="menu-outline" class="open"></ion-icon>
+          <ion-icon name="menu-outline" class="close"></ion-icon>
+    </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+        <script>
+          //add active class in selected list item
+          let list = document.querySelectorAll(".list");
+          for (let i = 0; i < list.length; i++) {
+            list[i].onclick = function () {
+              let j = 0;
+              while (j < list.length) {
+                list[j++].className = "list";
+              }
+              list[i].className = "list active";
+            };
+          }
+        </script>
+
+
+  <div class="header">
+      <h1>Varian Gamma</h1>
+
+        <!-- varian covid -->
+   <section class="variancovid">
+    <img src="img/img4.jpg" alt="" />
+    <h2>Varian Covid</h2>
+    <div class="varian">
+      <ol type="a">
+        <p>
+          Varian virus corona Inggris <b>B.1.1.7</b> disebut <a href="page30v1.html" style="text-decoration: none;"> <b>Alpha...</b></a>
+        </p>
+        <p>
+          Varian virus corona Afrika Selatan <b>B.1.351</b> disebut<a href="page30v2.html" style="text-decoration: none;"> <b>Beta...</b></a>
+        </p>
+        <p>
+          Varian virus corona Brasil <b>P.1</b> disebut <a href="page30v3.html" style="text-decoration: none;"> <b>Gamma...</b></a>
+        </p>
+        <p>
+          Varian India <b>B.1.617.2</b> disebut <a href="page30v4.html" style="text-decoration: none;"> <b>Delta...</b></a>
+        </p>
+        <p>
+          Varian Amerika Serikat <b>B.1.427/B.1.429</b> disebut <a href="page30v5.html" style="text-decoration: none;"> <b>Epsilon...</b></a>
+        </p>
+        <p>
+          Varian virus corona Brasil <b>P.2</b> disebut <a href="page30v6.html" style="text-decoration: none;"> <b>Zeta...</b></a>
+        </p>
+        <p>
+          Varian <b>B.1.525</b> disebut <a href="page30v7.html" style="text-decoration: none;"> <b>Eta...</b></a>
+        </p>
+        <p>
+          Varian Filipina <b>P.3</b> disebut <a href="page30v8.html" style="text-decoration: none;"> <b>Theta...</b></a>
+        </p>
+        <p>
+          Varian Amerika Serikat <b>B.1.526</b> disebut <a href="page30v9.html" style="text-decoration: none;"> <b>Iota...</b></a>
+        </p>
+        <p>
+          Varian India <b>B.1.617.1</b> disebut <a href="page30v10.html" style="text-decoration: none;"> <b>Kappa...</b></a>
+        </p>
+      </ol>
+    </div>
+</section>
+<!-- end varian covid -->
+
+    <div class="isi4">
+      <p>Gamma <b>P.1</b> adalah satu-satunya varian virus corona asal Amerika Latin yang masuk kriteria Variant of Concern dari Badan Kesehatan Dunia (WHO).</p>
+      <p>Varian ini awalnya mengakibatkan ledakan wabah di Brasil hingga memicu kenaikan jumlah pasien dan angka kematian secara drastis.</p>
+      <p>Tak lama kemudian, varian gamma menyebar ke negara-negara lain, terutama yang berbatasan dengan Brasil.</p>
+
+      <br />
+      <p>Para ahli bersilang pendapat mengenai kenapa varian gamma bisa mudah berkembang.</p>
+      <p>Beberapa ahli memperkirakan tingkat penularan gamma P.1 lebih dari dua kali lipat virus aslinya.</p>
+      <p>Ada pula yang mengatakan tingkat reinfeksi atau infeksi ulang gamma begitu tinggi sehingga meningkatkan jumlah kasus positif.</p>
+      <p>Sebuah studi menemukan bahwa satu dari enam orang yang terjangkit Covid-19 di Manaus, Brasil, adalah pasien reinfeksi dari gamma.</p>
+
+      <br />
+      <p>Sementara itu, para peneliti dari Harvard University, Amerika Serikat, mendapati tingkat kematian akibat varian gamma lebih tinggi daripada varian awalnya.</p>
+      <p>Temuan-temuan ini membuat negara-negara tetangga Brasil langsung menutup perbatasan dengan negeri itu demi mengurangi risiko penularan.</p>
+
+      <br />
+      <p>Gejala Covid-19 Varian Gamma P.1 :</p>
+      <ul>
+        <li><p>Demam</p></li>
+        <li><p>Batuk kering</p></li>
+        <li><p>Kelelahan ekstrem</p></li>
+        <li><p>Hilangnya daya penciuman</p></li>
+      </ul>
+
+      <br />
+      <p>Sampai sekarang, belum ditemukan gejala khas pada pasien Covid-19 dengan varian gamma.</p>
+    </div>
+  </div>
+
+    <!--Copyright-->
+    <footer>
+      <div id="copyright">
+        <div class="wrapper">&copy; 2021. <b>primayahospital.com</b> All Right Reseved.</div>
+      </div>
+    </footer>
+    <!--Akhir Copyright-->
+  </body>
+</html>
